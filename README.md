@@ -4,9 +4,13 @@
 
 **MCP server for reusable checklists and dated runs of them: pass, fail, not applicable, and a sign-off.** Checklists you build once and run many times, and the dated record of each run that somebody signs.
 
-Works with Claude Desktop, Claude Code, Cursor and any Model Context Protocol client. Runs on your own machine: this one has no hosted endpoint, so install it from the bundle or from source.
+Works with Claude Desktop, Claude Code, Cursor and any Model Context Protocol client. Runs on your own machine, or hosted with no install.
 
 ## Install
+
+**Hosted, nothing to install.** Get a token from <https://mcp.zovo.one/mcp/connect> (the connect page) or <https://mcp.zovo.one/mcp/token> (the same token as JSON); a free anonymous one is issued on the spot and a Pro key works the same way. Then point an MCP client at `https://mcp.zovo.one/mcp/checklist` over streamable-http and send the token as `Authorization: Bearer <token>`.
+
+If your client cannot set headers, put the token in the path instead: `https://mcp.zovo.one/mcp/checklist/t/<token>`. Both forms work. The bare URL with no token answers 401 on `tools/call`, so the token is not optional.
 
 **Claude Desktop, one click.** Download `checklist.mcpb` from the [latest release](https://github.com/theluckystrike/mcp-servers/releases/latest) and double-click it.
 
@@ -33,10 +37,13 @@ Then point your client at the built entry point:
 
 > `@theluckystrike/mcp-checklist` is **not published on npm yet**, so an `npx -y @theluckystrike/mcp-checklist` command will fail. The three paths above are the working ones and each is exercised by CI.
 
+![checklist demo](https://raw.githubusercontent.com/theluckystrike/mcp-servers/main/assets/demo-checklist.gif)
+
 Read-only mirror of [mcp-servers/servers/checklist](https://github.com/theluckystrike/mcp-servers/tree/main/servers/checklist). See [MIRROR.md](MIRROR.md).
 
 <!-- mirror-seo:end -->
 
+**In the [official MCP Registry](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.theluckystrike%2Fchecklist/versions/latest)** (`io.github.theluckystrike/checklist`).
 Checklists you build once and run many times, and the dated record of each run that
 somebody signs. A checklist is a named list of steps, optionally grouped into sections, each
 one required or optional. A run is one pass of that checklist against a job: every step is

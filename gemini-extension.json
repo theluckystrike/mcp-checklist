@@ -1,0 +1,22 @@
+{
+  "name": "mcp-checklist",
+  "version": "0.22.0",
+  "description": "MCP server for reusable checklists and dated runs of them: pass, fail, not applicable, and a sign-off. Checklists you build once and run many times, and the dated record of each run that somebody signs.",
+  "settings": [
+    {
+      "name": "mcp.zovo.one token",
+      "description": "A free anonymous token from https://mcp.zovo.one/mcp/token, or your Pro key. One token is one data space, and it is refreshed for another 30 days on every write.",
+      "envVar": "ZOVO_MCP_TOKEN",
+      "sensitive": true
+    }
+  ],
+  "mcpServers": {
+    "checklist": {
+      "httpUrl": "https://mcp.zovo.one/mcp/checklist",
+      "headers": {
+        "Authorization": "Bearer ${ZOVO_MCP_TOKEN}"
+      },
+      "description": "Checklists you build once and run many times, and the dated record of each run that somebody signs."
+    }
+  }
+}
