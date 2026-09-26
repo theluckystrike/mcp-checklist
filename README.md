@@ -45,6 +45,8 @@ Read-only mirror of [mcp-servers/servers/checklist](https://github.com/theluckys
 
 <!-- mirror-seo:end -->
 
+[![theluckystrike/mcp-checklist MCP server](https://glama.ai/mcp/servers/theluckystrike/mcp-checklist/badges/score.svg)](https://glama.ai/mcp/servers/theluckystrike/mcp-checklist)
+
 **In the [official MCP Registry](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.theluckystrike%2Fchecklist/versions/latest)** (`io.github.theluckystrike/checklist`).
 Checklists you build once and run many times, and the dated record of each run that
 somebody signs. A checklist is a named list of steps, optionally grouped into sections, each
@@ -54,7 +56,7 @@ says what was found. `run_sign_off` then puts a name and a date on it and freeze
 
 ## The one rule that decides everything else
 
-**A run copies its checklist when it starts.** If somebody edits the checklist afterwards,
+If somebody edits the checklist afterwards,
 adds a step or deletes one, every run already in progress keeps the list it started with,
 and the version it was copied from is recorded on the run.
 
@@ -85,7 +87,7 @@ are not silent.
 
 ## Install
 
-**One-click (.mcpb):** download `checklist.mcpb` from the latest release and double-click it
+One-click (.mcpb): download `checklist.mcpb` from the latest release and double-click it
 in Claude Desktop: https://github.com/theluckystrike/mcp-servers/releases/latest
 
 npm publish for `@theluckystrike/mcp-checklist` is pending, so the `npx` line below returns
@@ -158,7 +160,7 @@ trade with one pre-delivery check, one handover sheet and one snag list runs its
 inside the free tier. Runs are never capped, because capping the running of a checklist would
 cap the only thing a checklist is for. Deleting a checklist frees a slot.
 
-**Get Pro:** https://mcp.zovo.one/buy/checklist (one-time), or all servers for one price at
+Get Pro: https://mcp.zovo.one/buy/checklist (one-time), or all servers for one price at
 https://mcp.zovo.one/buy/bundle
 
 ## Privacy
@@ -169,3 +171,9 @@ that it does not own is the shared business profile, for the name and address at
 printed report, and it never writes to it.
 
 Built by [theluckystrike](https://github.com/theluckystrike). Support: support@zovo.one
+
+## Use these docs as an MCP server
+
+Any MCP client (Claude, Cursor, Windsurf, VS Code) can read this repository's documentation directly via GitMCP — no install:
+
+- Docs MCP URL: https://gitmcp.io/theluckystrike/mcp-checklist
